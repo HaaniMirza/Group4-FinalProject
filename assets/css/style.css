@@ -1,3 +1,69 @@
 h1 {
     text-align: center;
+    background-image: url(https://st4.depositphotos.com/13349494/31092/i/450/depositphotos_310927692-stock-photo-orange-gerbera-flowers-violet-background.jpg);
+    height: 80px;
+    font-size: 40px;
+    margin-top: 0;
 }
+
+.form {
+    font-family: capitalize;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.form-title {
+    font-size: 1.5em;
+}
+
+.form * {
+    box-sizing: border-box;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.form-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-items > * {
+    align-self: flex-start;
+}
+
+.form-label {
+    font-weight: 600;
+    padding: 10px 0;
+
+}
+
+.form-input {
+    width: 300px;
+    height: 40px;
+    border-radius: 3px;
+}
+
+.form-input-sm {
+    width: 140px;
+    height: 25px;
+}
+
+.form-btn {
+    font-family: sans-serif;
+    font-weight: 600;
+    padding: 10px 16px;
+    margin: 20px 0;
+    border-radius: 3px;
+    background-color: rgb(218, 195, 218);
+    cursor: pointer;
+    width: 150px;
+}
+
+.card {
+    background-color: rgb(218, 195, 218);
+    width: 300px;
+    height: 80px;
+    padding: 5px;
+    margin-top: 20px;
+}
+    
