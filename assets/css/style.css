@@ -61,19 +61,28 @@ h1 {
 
 .card-body {
     background-color: rgb(218, 195, 218);
-    width: 300px;
-    height: 80px;
+    font-size: 30px;
+    width: 600px;
+    height: 160px;
     padding: 5px;
     margin-top: 20px;
-    position: fixed;
+    /*position: fixed;*/
+    float: right;
+    margin-right: 1000px;
+    border: 10px;
+    border-style: dashed;
+    border-color: blueviolet;
 }
 
 .container {
     background-color: rgb(218, 195, 218);
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 500px;
     padding: 5px;
     margin-top: 20px;
-
+    border: 10px;
+    border-style: dashed;
+    border-color: blueviolet;
+    float: left;
+    margin-left: 50px;
 }
-    
