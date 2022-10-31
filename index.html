@@ -11,30 +11,39 @@
     <header>
         <h1>Task List</h1>
     </header>
-    <h2>Add New Task</h2>
-    <form>
-        <label for="task">Task Name</label>
-        <input type="text" id="task" required>
-        <br>
-        <br>
-        <label for="desc">Task Description</label>
-        <input type="text" id="desc" required>
-        <br>
-        <br>
-        <label for="name">Assigned To:</label>
-        <input type="text" id="name" required>
-        <br>
-        <br>
-        <label for="date">Due Date:</label>
-        <input type="date" id="date" required>
-        <br>
-        <br>
-        <input type="submit" id="submit" value="Add Task">
+    <form class="form">
+        <div class="form-title">Add New Task</div>
+
+        <div class="form-items">
+        <label for="task" class="form-label">Task Name</label>
+        <input type="text" id="task" required class="form-input">
+        </div>
+
+        <div class="form-items">
+        <label for="desc" class="form-label">Task Description</label>
+        <input type="text" id="desc" required class="form-input">
+        </div>
+
+        <div class="form-items">
+        <label for="name" class="form-label">Assigned To:</label>
+        <input type="text" id="name" required class="form-input">
+        </div>
+
+        <div class="form-items">
+        <label for="date" class="form-label">Due Date:</label>
+        <input type="date" id="date" required class="form-input form-input-sm">
+        </div>
+
+         <div class="form-items">
+        <button type="submit" class="form-btn">Add Task</button>
+        </div>
     </form>
     <footer>
-        <article>
-            <p>“Take your victories, whatever they may be, cherish them, use them, but don’t settle for them.” —Mia Hamm</p>
-        </article>
+        <div class="card">
+            <div class="card-body">
+              <p>“Take your victories, whatever they may be, cherish them, use them, but don’t settle for them.” —Mia Hamm</p>
+            </div>
+          </div>
     </footer>
 </body>
 </html>
