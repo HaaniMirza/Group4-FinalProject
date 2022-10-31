@@ -59,11 +59,21 @@ h1 {
     width: 150px;
 }
 
-.card {
+.card-body {
     background-color: rgb(218, 195, 218);
     width: 300px;
     height: 80px;
     padding: 5px;
     margin-top: 20px;
+    position: fixed;
+}
+
+.container {
+    background-color: rgb(218, 195, 218);
+    width: 300px;
+    height: 300px;
+    padding: 5px;
+    margin-top: 20px;
+
 }
     
