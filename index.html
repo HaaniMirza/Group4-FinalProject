@@ -12,7 +12,7 @@
     <header>
         <h1>Task List</h1>
     </header>
-    <form class="form">
+    <form class="form" name="task" onsubmit="return validateForm()">
         <div class="form-title">Add New Task</div>
 
         <div class="form-items">
@@ -22,17 +22,17 @@
 
         <div class="form-items">
         <label for="desc" class="form-label">Task Description:</label>
-        <input type="text" id="desc" required class="form-input">
+        <textarea type="text" rows="5" id="desc" required class="form-desc"></textarea>
         </div>
 
         <div class="form-items">
         <label for="name" class="form-label">Assigned To:</label>
-        <input type="text" id="name" required class="form-input">
+        <input type="text" id="name" required class="form-input" name="assign">
         </div>
 
         <div class="form-items">
         <label for="date" class="form-label">Due Date:</label>
-        <input type="date" id="date" required class="form-input form-input-sm">
+        <input type="date" id="date" required class="form-input form-input-sm" value="2020-11-20" name="date">
         </div>
 
         <div class="form-items">
