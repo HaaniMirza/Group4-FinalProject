@@ -1,4 +1,12 @@
-
+class taskModel {
+    constructor(taskName, taskDesc, assignName, dueDate, taskStatus) {
+        this.taskName = taskName;
+        this.taskDesc = taskDesc;
+        this.assignName = assignName;
+        this.dueDate = dueDate;
+        this.taskStatus = taskStatus;
+    }
+}
 
 function validateForm() {
     let x = document.forms["task"]["assign"].value;
@@ -11,6 +19,23 @@ function validateForm() {
     //console.log(y);
     if (y != 10) {
         alert("Please enter a valid date, with a 4 digit year, 2 digit month, and 2 digit day");
+        return false;
     }
+    
+    let a = document.forms["task"]["taskname"].value;
+    let b = document.forms["task"]["taskdesc"].value;
+    let c = document.forms["task"]["assign"].value;
+    let d = document.forms["task"]["date"].value;
+    //console.log(a + b + c + d);
+    let newTask = new taskModel(a, b, c, d, "TODO");
+
+    console.log(newTask);
+    alert("hehehe");
     return false;
+        
 }
+
+
+
+//let testTask = new taskModel("Finish JS", "Work on the JavaScript portion of the project to bring functionality to the task manager", "Haani", "12/25/2022", "TODO");
+//let z = new taskModel(document.forms["task"]["taskname"].value, document.forms["tasks"]["taskdesc"].value, document.forms["tasks"]["assign"].value, document.forms["tasks"]["date"].value, "TODO");
