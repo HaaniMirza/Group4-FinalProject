@@ -40,19 +40,19 @@
         <button type="submit" class="form-btn">Add Task</button>
         </div>
     </form>
-
+    <form name="update" onsubmit="return updateTask()">
     <div class="container">
         <div class="card">
             <h3 class="card-title">Tasks</h3>
 
             <h5 class="card-subtitle">Task Name:</h5>
-            <p>Do the dishes</p>
+            <p id="tname"></p>
 
             <h5 class="card-subtitle">Assigned to:</h5>
-            <p>Chaya</p>
+            <p id="tassign"></p>
 
             <h5 class="card-subtitle">Due Date:</h5>
-            <p>11/02/22</p>
+            <p id="tdd"></p>
 
             <label for="status" class="card-subtitle">Status</label>
             <select name="status" id="status">
@@ -62,110 +62,11 @@
                 <option value="DONE">DONE</option>
             </select>
             <h5 class="card-subtitle">Task Description</h5>
-            <p class="card-subtitle">Wash the dishes before 8:00 PM on November 2nd, 2022.</p>
+            <p id="tdesc" class="card-subtitle"></p>
+            <button type="submit">Update Task</button>
         </div>
     </div>
-
-    <div class="container">
-        <div class="card">
-            <h3 class="card-title">Tasks</h3>
-
-            <h5 class="card-subtitle">Task Name:</h5>
-            <p>Take out the trash</p>
-
-            <h5 class="card-subtitle">Assigned to:</h5>
-            <p>Haani</p>
-
-            <h5 class="card-subtitle">Due Date:</h5>
-            <p>11/01/22</p>
-
-            <label for="status" class="card-subtitle">Status</label>
-            <select name="status" id="status">
-                <option value="TODO">TODO</option>
-                <option value="IN PROGRESS">IN PROGRESS</option>
-                <option value="REVIEW">REVIEW</option>
-                <option value="DONE">DONE</option>
-            </select>
-            <h5 class="card-subtitle">Task Description</h5>
-            <p class="card-subtitle">Collect the trash from every room and take it out to the dumpster.</p>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="card">
-            <h3 class="card-title">Tasks</h3>
-
-            <h5 class="card-subtitle">Task Name:</h5>
-            <p>Grocery Shopping</p>
-
-            <h5 class="card-subtitle">Assigned to:</h5>
-            <p>Elodie</p>
-
-            <h5 class="card-subtitle">Due Date:</h5>
-            <p>11/04/22</p>
-
-            <label for="status" class="card-subtitle">Status</label>
-            <select name="status" id="status">
-                <option value="TODO">TODO</option>
-                <option value="IN PROGRESS">IN PROGRESS</option>
-                <option value="REVIEW">REVIEW</option>
-                <option value="DONE">DONE</option>
-            </select>
-            <h5 class="card-subtitle">Task Description</h5>
-            <p class="card-subtitle">Purchase ingredients for pizza. Making this weekend, so get before Friday!</p>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="card">
-            <h3 class="card-title">Tasks</h3>
-
-            <h5 class="card-subtitle">Task Name:</h5>
-            <p>Wash the car</p>
-
-            <h5 class="card-subtitle">Assigned to:</h5>
-            <p>Tony</p>
-
-            <h5 class="card-subtitle">Due Date:</h5>
-            <p>11/05/22</p>
-
-            <label for="status" class="card-subtitle">Status</label>
-            <select name="status" id="status">
-                <option value="TODO">TODO</option>
-                <option value="IN PROGRESS">IN PROGRESS</option>
-                <option value="REVIEW">REVIEW</option>
-                <option value="DONE">DONE</option>
-            </select>
-            <h5 class="card-subtitle">Task Description</h5>
-            <p class="card-subtitle">Give the car a deep clean and shine the outside.</p>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="card">
-            <h3 class="card-title">Tasks</h3>
-
-            <h5 class="card-subtitle">Task Name:</h5>
-            <p>Prepare meal prep</p>
-
-            <h5 class="card-subtitle">Assigned to:</h5>
-            <p>Leean</p>
-
-            <h5 class="card-subtitle">Due Date:</h5>
-            <p>11/06/22</p>
-
-            <label for="status" class="card-subtitle">Status</label>
-            <select name="status" id="status">
-                <option value="TODO">TODO</option>
-                <option value="IN PROGRESS">IN PROGRESS</option>
-                <option value="REVIEW">REVIEW</option>
-                <option value="DONE">DONE</option>
-            </select>
-            <h5 class="card-subtitle">Task Description</h5>
-            <p class="card-subtitle">Use the groceries to prepare daily breakfast meals.</p>
-        </div>
-    </div>
-
+    </form>
     <footer>
         <div class="card">
             <div class="card-body">
