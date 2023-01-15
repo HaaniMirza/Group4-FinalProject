@@ -8,47 +8,77 @@ class taskModel {
     }
 }
 
-var taskList;
-var newTask;
+let existingTaskList = JSON.parse(localStorage.getItem('taskList'));
+var taskList = [];
+let isExistingTasks = false;
+if (existingTaskList != null) {
+    console.log(existingTaskList);
+    isExistingTasks = true;
+    //alert("oh no");
+    taskList.push(existingTaskList[0]);
+
+    validateForm();
+    // document.getElementById('tname').innerHTML = existingTaskList[0].taskName;
+}
+
 
 function validateForm() {
-    let x = document.forms["task"]["assign"].value;
-    if (/\d/.test(x)) {
-        alert("Please enter a name in the Assigned To: field");
-        return false;
-    }
+    let a, b, c, d, e = "";
+    if (isExistingTasks) {
+        
+        a = existingTaskList[0].taskName;
+        b = existingTaskList[0].taskDesc;
+        c = existingTaskList[0].assignName;
+        d = existingTaskList[0].dueDate;
+        e = existingTaskList[0].taskStatus;
+    } else {
+        let x = document.forms["task"]["assign"].value;
+        if (/\d/.test(x)) {
+            alert("Please enter a name in the Assigned To: field");
+            return false;
+        }
+        
+        let y = document.forms["task"]["date"].value.length;
+        //console.log(y);
+        if (y != 10) {
+            alert("Please enter a valid date, with a 4 digit year, 2 digit month, and 2 digit day");
+            return false;
+        }
+        //document.getElementById("tname").innerHTML = a;
+        a = document.forms["task"]["taskname"].value;
+        b = document.forms["task"]["taskdesc"].value;
+        c = document.forms["task"]["assign"].value;
+        d = document.forms["task"]["date"].value;
+        e = "TODO";
 
-    let y = document.forms["task"]["date"].value.length;
-    //console.log(y);
-    if (y != 10) {
-        alert("Please enter a valid date, with a 4 digit year, 2 digit month, and 2 digit day");
-        return false;
+        let newTask = new taskModel(a, b, c, d, e);
+        taskList.push(newTask);
     }
-    //document.getElementById("tname").innerHTML = a;
-    let a = document.forms["task"]["taskname"].value;
-    let b = document.forms["task"]["taskdesc"].value;
-    let c = document.forms["task"]["assign"].value;
-    let d = document.forms["task"]["date"].value;
-    
-    newTask = new taskModel(a, b, c, d, "TODO");
-    //taskList += newTask;
-    //console.log(taskList);
-    document.getElementById('tname').innerHTML = a;
+    console.log(taskList);
+    setTimeout(() => { document.getElementById('tname').innerHTML = a;
     document.getElementById('tdesc').innerHTML = b;
     document.getElementById('tassign').innerHTML = c;
     document.getElementById('tdd').innerHTML = d;
+    document.getElementById('status').value = e; }, 1);
+    
+    
+    let stringList = JSON.stringify(taskList);
+    localStorage.setItem("taskList", stringList);
 
-    //console.log(newTask);
-    alert("hehehe");
+    //alert("hehehe");
     return false;
         
 }
 
 function updateTask() {
-    newTask.taskStatus = document.forms["update"]["status"].value;
-    console.log(newTask);
-    alert("hahaha");
+
+    taskList[0].taskStatus = document.forms["update"]["status"].value;
+    console.log(taskList[0]);
+    //alert("hahaha");
+    let stringList = JSON.stringify(taskList);
+    localStorage.setItem("taskList", stringList);
     return false;
+
 }
 
 
