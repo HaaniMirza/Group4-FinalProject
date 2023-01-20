@@ -1,31 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
 h1 {
     text-align: center;
-    background-image: url(https://st4.depositphotos.com/13349494/31092/i/450/depositphotos_310927692-stock-photo-orange-gerbera-flowers-violet-background.jpg);
+    letter-spacing: 40px;
+    text-transform: capitalize;
+    align-items: center;
     height: 80px;
-    font-size: 40px;
+    font-size: 50px;
+    background-color: beige;
     margin-top: 0;
+  
 }
 
 .form-desc {
     width: 300px;
     height: 120px;
     border-radius: 3px;
+    font-weight: lighter;
+    font-size: medium;
+
 }
 
 .form {
-    font-family: capitalize;
-    font-size: 16px;
     font-family: sans-serif;
+    font-size: 16px;
+    font-family: cursive;
+    margin-left: 49px;
 }
 
 .form-title {
     font-size: 1.5em;
+    font-family: sans-serif;
 }
 
 .form * {
     box-sizing: border-box;
     line-height: 1.2;
     font-weight: 600;
+    border-radius: none;
+    padding: 10px;
 }
 
 .form-items {
@@ -35,38 +54,55 @@ h1 {
 
 .form-items > * {
     align-self: flex-start;
+    width: 1000px;
+    font-family: sans-serif;
+    
 }
 
 .form-label {
     font-weight: 600;
     padding: 10px 0;
-
+    font-family: sans-serif;
+    font-size: medium;
+    border: none;
 }
 
 .form-input {
-    width: 300px;
-    height: 40px;
+    width: 1000px;
+    height: 50px;
     border-radius: 3px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: medium;
+    border-color: lightgray;
+
 }
 
 .form-input-sm {
-    width: 140px;
-    height: 25px;
+    width: 1000px;
+    height: 40px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: medium;
+
 }
+
 
 .form-btn {
     font-family: sans-serif;
-    font-weight: 600;
+    font-weight: 600px;
     padding: 10px 16px;
     margin: 20px 0;
     border-radius: 3px;
-    background-color: rgb(218, 195, 218);
+    background-color: beige;
     cursor: pointer;
-    width: 150px;
+    width: 1000px;
+    font-size: large;
+    
 }
 
 .card-body {
-    background-color: rgb(218, 195, 218);
+    background-color: beige;
     font-size: 30px;
     width: 600px;
     height: 160px;
@@ -76,19 +112,47 @@ h1 {
     float: right;
     margin-right: 1000px;
     border: 10px;
-    border-style: dashed;
-    border-color: blueviolet;
+    /*border-style: dashed;*/
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.4);
+    text-align: center;
+    padding-top: 20px;
+    line-height: 125%;
+    /*border-color: blueviolet;*/
 }
 
 .container {
-    background-color: rgb(218, 195, 218);
+    background-color: beige;
     width: 400px;
-    height: 500px;
+    height: 400px;
     padding: 5px;
     margin-top: 20px;
     border: 10px;
-    border-style: dashed;
-    border-color: blueviolet;
+    border-style: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.4);
+    box-sizing: border-box;
+    border: none;
     float: left;
     margin-left: 50px;
+    font-family: sans-serif;
 }
+
+button {
+    padding: 5px;
+    width: 150px;
+    background-color: white;
+    border-color: lightgray;
+    border-radius: 4px;
+}
+
+select {
+    border-radius: 3px;
+    padding: 2px;
+    background-color: white;
+}
+
+.card {
+    line-height: 150%;
+}
+
