@@ -6,12 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task List</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <script src="https://kit.fontawesome.com/3fb09a0290.js" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 </head>
 <body>
+    <!-- Main background -->
+    <div class="main-bg">
     <header>
         <h1>Task List</h1>
     </header>
+    <!-- Quote card -->
+    <div class="card">
+        <div class="card-body">
+          <p><b>“Take your victories, whatever they may be, cherish them, use them, but don't settle for them.” —Mia Hamm</b></p>
+        </div>
+      </div>
     <div id="error"></div>
     <form class="form" id="form" name="task" onsubmit="return validateForm()"> 
         <div class="form-title">Add New Task</div>
@@ -41,7 +50,9 @@
         <button type="submit" class="form-btn">Add Task</button>
         </div>
     </form>
+    </div>
     <form name="update" onsubmit="return updateTask()">
+    <!-- Task cards -->
         <div class="container">
             <div class="card">
                 <h3 class="card-title">Tasks</h3>
@@ -64,7 +75,8 @@
                 </select>
                 <h5 class="card-subtitle">Task Description</h5>
                 <p id="tdesc0" class="card-subtitle"></p>
-                <button type="submit">Update Task</button>
+                <button id="update" type="submit">Update Task</button>
+                <button id="remove" type="submit">Delete Task</button>
             </div>
         </div>
     </form>
@@ -91,7 +103,8 @@
                 </select>
                 <h5 class="card-subtitle">Task Description</h5>
                 <p id="tdesc1" class="card-subtitle"></p>
-                <button type="submit">Update Task</button>
+                <button id="update" type="submit">Update Task</button>
+                <button id="remove" type="submit">Delete Task</button>
             </div>
         </div>
     </form>
@@ -118,7 +131,8 @@
                 </select>
                 <h5 class="card-subtitle">Task Description</h5>
                 <p id="tdesc2" class="card-subtitle"></p>
-                <button type="submit">Update Task</button>
+                <button id="update" type="submit">Update Task</button>
+                <button id="remove" type="submit">Delete Task</button>
             </div>
         </div>
     </form>
@@ -145,7 +159,8 @@
                 </select>
                 <h5 class="card-subtitle">Task Description</h5>
                 <p id="tdesc3" class="card-subtitle"></p>
-                <button type="submit">Update Task</button>
+                <button id="update" type="submit">Update Task</button>
+                <button id="remove" type="submit">Delete Task</button>
             </div>
         </div>
     </form>
@@ -172,16 +187,16 @@
                 </select>
                 <h5 class="card-subtitle">Task Description</h5>
                 <p id="tdesc4" class="card-subtitle"></p>
-                <button type="submit">Update Task</button>
+                <button id="update" type="submit">Update Task</button>
+                <button id="remove" type="submit">Delete Task</button>
             </div>
         </div>
     </form>
+<!-- Social -->
     <footer>
-        <div class="card">
-            <div class="card-body">
-              <p><b>“Take your victories, whatever they may be, cherish them, use them, but don't settle for them.” —Mia Hamm</b></p>
-            </div>
-          </div>
-    </footer>
+        <div class="social">
+            <a href="https://github.com/HaaniMirza/Group4-FinalProject" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github fa-bounce"></i></a>
+        </div>
+    </footer> 
 </body>
 </html>

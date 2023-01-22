@@ -1,30 +1,43 @@
 body {
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif, 'Times New Roman', Times, serif;
+    background-color: whitesmoke;
+    transform-style: preserve-3d;
 }
 
+/* Web background */
 
+.main-bg {
+    background-image: url("../images/beigebg-2.png");
+    min-height: 500px;
+    height: 100vh; 
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: center; 
+}
 
+/* Title */
 h1 {
     text-align: center;
     letter-spacing: 40px;
-    text-transform: capitalize;
-    align-items: center;
+    text-transform: uppercase;
+    align-items: center; 
     height: 80px;
     font-size: 50px;
-    background-color: beige;
     margin-top: 0;
-  
 }
 
+/* Form */
 .form-desc {
     width: 300px;
     height: 120px;
-    border-radius: 3px;
+    /* border-radius: 3px; */
     font-weight: lighter;
     font-size: medium;
-
 }
 
 .form {
@@ -32,6 +45,8 @@ h1 {
     font-size: 16px;
     font-family: cursive;
     margin-left: 49px;
+    box-shadow: rgba(0,0,0,.4);
+    border-radius: 1rem;
 }
 
 .form-title {
@@ -43,20 +58,23 @@ h1 {
     box-sizing: border-box;
     line-height: 1.2;
     font-weight: 600;
-    border-radius: none;
+    border-radius: 2rem;
     padding: 10px;
 }
 
 .form-items {
     display: flex;
     flex-direction: column;
+    box-shadow: rgba(0,0,0,.4);
+    border-radius: 1rem;
 }
 
 .form-items > * {
     align-self: flex-start;
     width: 1000px;
     font-family: sans-serif;
-    
+    box-shadow: rgba(0,0,0,.4);
+    border-radius: 1rem;
 }
 
 .form-label {
@@ -70,12 +88,13 @@ h1 {
 .form-input {
     width: 1000px;
     height: 50px;
-    border-radius: 3px;
+    /* border-radius: 3px; */
     font-family: sans-serif;
     font-weight: lighter;
     font-size: medium;
     border-color: lightgray;
-
+    box-shadow: 5px;
+    border-radius: 1rem;
 }
 
 .form-input-sm {
@@ -94,15 +113,16 @@ h1 {
     padding: 10px 16px;
     margin: 20px 0;
     border-radius: 3px;
-    background-color: beige;
+    background-color: rgba(160, 135, 135, 0.692);
     cursor: pointer;
     width: 1000px;
     font-size: large;
     
 }
 
+/* Quote card */
 .card-body {
-    background-color: beige;
+    background-color: rgba(240, 240, 240, 0.4);
     font-size: 30px;
     width: 600px;
     height: 160px;
@@ -110,7 +130,7 @@ h1 {
     margin-top: 20px;
     /*position: fixed;*/
     float: right;
-    margin-right: 1000px;
+    margin-right: 50px;
     border: 10px;
     /*border-style: dashed;*/
     border-radius: 10px;
@@ -119,10 +139,12 @@ h1 {
     padding-top: 20px;
     line-height: 125%;
     /*border-color: blueviolet;*/
+    float: right;
 }
 
+/* Task cards */
 .container {
-    background-color: beige;
+    background-color: rgba(211, 193, 176, 0.4);
     width: 400px;
     height: 400px;
     padding: 5px;
@@ -136,14 +158,29 @@ h1 {
     float: left;
     margin-left: 50px;
     font-family: sans-serif;
+    margin-bottom: 50px;
 }
 
+/* All buttons */
 button {
     padding: 5px;
     width: 150px;
     background-color: white;
     border-color: lightgray;
     border-radius: 4px;
+    transition: ease-out 0.3s;
+}
+
+button:hover {
+    color: rgb(136, 104, 78);
+    background: white;
+    box-shadow: inset 0 0 10px white, 0 0 40px white, 0 0 80px;
+}
+
+
+/* Update button */
+#update {
+    margin-left: 42px;
 }
 
 select {
@@ -156,3 +193,25 @@ select {
     line-height: 150%;
 }
 
+/* footer */
+footer {
+    display: flex;
+    width: 100%;
+    background-color: rgba(160, 135, 135, 0.692);
+    padding: 36px 0px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    /* line-height: 30px; */
+    margin-top: 0px; 
+    height: 10px;
+}
+
+footer .social a {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 1000px;
+    justify-content: center;
+}
