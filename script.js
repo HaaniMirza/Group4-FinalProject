@@ -79,8 +79,11 @@ function validateForm() {
         //console.log(y);
         if (y != 10) {
             console.log(document.forms["task"]["date"].value);
-            alert("Please enter a valid date, with a 4 digit year, 2 digit month, and 2 digit day");
-            return false;
+            y = document.forms["task"]["date"].value.length;
+            if (y != 10) {
+                alert("Please enter a valid date, with a 4 digit year, 2 digit month, and 2 digit day");
+                return false;
+            }
         }
         //document.getElementById("tname").innerHTML = a;
         a = document.forms["task"]["taskname"].value;
